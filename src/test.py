@@ -1,10 +1,11 @@
 import random as rd
 
 # 5판 3선승제 게임에서 종료할 상황인지 판단합니다.
+# True : 계속, False : 종료
 def is_game_continue(player_a:int, player_b:int) -> bool:
-    if (player_a + player_b) == 5 or player_a == 3 or player_b == 3:
-        return False
-    return True
+    if (player_a + player_b) < 5 and player_a < 3 and player_b < 3:
+        return True
+    return False
 
 # index() 함수를 시행합니다.
 # 시행할 수 없다면 -1을 반환합니다.
