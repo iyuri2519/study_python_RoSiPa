@@ -10,7 +10,7 @@ def is_game_continue(player_a:int, player_b:int) -> bool:
 # 가위바위보 함수를 시행하고, 플레이어가 선택한 두개의 index를 반환합니다.
 def RunRSP(arr:list) -> list[int, int]:
     while True:
-        player = input("플레이어 : ").split()
+        player = input("플레이어 : ").strip().split()
         if player == []:
             print("말을 하세요!")
             continue
@@ -30,7 +30,7 @@ def RunRSP(arr:list) -> list[int, int]:
 def ChoiceRSP(arr:list, player_idx:list) -> int:
     player_arr = [arr[player_idx[0]], arr[player_idx[1]]]
     while True:
-        player_choice = input("플레이어 선택 : ")
+        player_choice = input("플레이어 선택 : ").strip()
         if player_choice not in player_arr:
             print(f"{player_arr[0]}, {player_arr[1]} 중에 내주세요! Ex) {player_arr[0]}")
             continue
