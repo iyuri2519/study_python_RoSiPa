@@ -1,4 +1,6 @@
 class RSP:
+    default_choices = ["가위, 바위, 보"]
+
     # 반드시 [0] <= [1] <= [2] <= [0] 순이 되도록 입력해주세요.
     # rsp_arr 에는 문자열 리스트가 들어올 수 있으며, 입력하지 않으면 None으로 처리됩니다.
     def __init__(self, rsp_arr:list[str] | None = None):
