@@ -23,20 +23,20 @@ while True:
     attacker = win_num
     break
 
-game.change_choice_arr()
+game.change_choice_arr(MZP)
 while True:
     if attacker:
-        print(f"플레이어 : ", f"{MZP[player_idx]}"*2, "... ", end="")
+        print(f"플레이어 공격 : {MZP[player_idx]*2}... ", end="")
         player_idx = game.get_player_choice()
         com_idx = rd.randint(0,2)
         print(f"컴퓨터 : {MZP[com_idx]}!")
     else:
+        print(f"플레이어 수비 : ", end="")
         player_idx = game.get_player_choice()
-        print(f"컴퓨터 : ", f"{MZP[com_idx]}"*2, "... ", end="")
+        print(f"컴퓨터 : {MZP[com_idx]*2}... ", end="")
         com_idx = rd.randint(0,2)
         print(f"{MZP[com_idx]}!")
-        print(f"플레이어 : {MZP[player_idx]}")
-
+    
     win_num = game.is_player_win(player_idx, com_idx)
     mzp_result = game.decide_mzp_result(attacker, win_num)
     if mzp_result == "pass":
