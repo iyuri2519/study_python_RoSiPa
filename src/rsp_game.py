@@ -23,7 +23,7 @@ while True:
     attacker = win_num
     break
 
-game.change_choice_arr(MZP)
+game.change_choice_arr(MZP)     # 가위바위보 가 아닌 묵찌빠 로 입력하도록 바꿈
 while True:
     if attacker:
         print(f"플레이어 공격 : {MZP[player_idx]*2}... ", end="")
